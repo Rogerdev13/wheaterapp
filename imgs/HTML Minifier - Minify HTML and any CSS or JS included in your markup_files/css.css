@@ -1,0 +1,750 @@
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), local('Raleway-Regular'), url('/fonts/raleway.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+body {
+    padding: 23px 30px 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    color: #eee;
+    background-color: #323232;
+}
+
+body#home,
+body#ip-ua,
+body#tools,
+body#minifier,
+.category-index,
+.book {
+  margin: 0;
+  padding: 0;
+  background: rgb(45, 45, 45);
+  color: #eee;
+  font-family: 'Raleway', sans-serif;
+  font-size: 17px;
+}
+
+header {
+  background: #222;
+  padding: 15px 25px;
+  font-weight: bold;
+  letter-spacing: .1em;
+}
+
+nav {
+  display: inline;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+.logo,
+.logo a {
+  color: #FFC300;
+  color: #c4a747;
+}
+
+main {
+  margin: 25px;
+  position: relative;
+}
+
+#minifier main {
+  margin: 12px 25px 25px;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.4em;
+    color: #999;
+}
+
+h1:first-of-type,
+#home h1:first-of-type {
+  margin-top: -3px;
+}
+
+p {
+  padding: 0;
+  margin: 2px 0 10px;
+  line-height: 1.5em;
+}
+
+h1 + p {
+  padding-top: 3px;
+}
+
+p+ul {
+    margin-top: -7px;
+}
+
+ul, ol {
+    margin: 0 0 10px 22px;
+    padding: 0;
+}
+
+ol {
+  margin-left: 20px;
+}
+
+li {
+  padding: 3px 0 4px;
+  line-height: 1.25em;
+}
+
+a {
+    text-decoration: none;
+}
+
+a {
+  color: #8fb3f7;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    font-size: 1.4em;
+    padding: 5px 10px;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #777;
+  margin: 25px 0 0;
+}
+
+#minify-button,
+#palindrome-button {
+    margin-top: 5px;
+    padding: 12px 35px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    border: 0;
+    color: #fff;
+}
+
+#palindrome-button {
+    margin-top: 0;
+}
+
+#minify-button:hover,
+#palindrome-button:hover {
+    background-color: #419945;
+}
+
+#minifier h1,
+#minifier h2 {
+  display: inline-block;
+  color: #eee;
+}
+
+#minifier h2 {
+  font-size: 16px;
+  padding-left: 10px;
+  font-weight: normal;
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+.book h1 {
+  color: #eee;
+  font-size: 1.8em;
+}
+
+.book h2 {
+  font-size: 18px;
+  color: #ccc;
+  font-weight: normal;
+  margin: 5px 0 7px;
+  line-height: 1.4em;
+}
+
+address,
+#notes {
+    font-style: normal;
+    font-size: .9em;
+    margin-top: 20px;
+    border-top: dotted 1px #888;
+    padding: 10px 0 0;
+    color: #333;
+}
+
+textarea {
+    overflow-x: hidden;
+}
+
+#note {
+    color: #ddd;
+    font-size: .9em;
+    float: right;
+    padding-top: 15px;
+}
+
+#note em,
+address em,
+#notes em {
+    color: #111;
+}
+
+#results {
+    visibility: hidden;
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    width: 285px;
+}
+
+#message {
+    color: #c40;
+    font-size: 1.4em;
+    padding-left: 12px;
+}
+
+#response {
+    font-size: 1.8em;
+    padding-left: 20px;
+    position: relative;
+    top: 3px;
+    font-weight: bold;
+}
+
+#entries {
+    margin-right: 330px;
+}
+
+#instructions {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    color: #444;
+    font-size: .9em;
+    line-height: 18px;
+}
+
+.num {
+    padding-left: 12px;
+    color: #c60;
+}
+
+.pipe {
+    color: #666;
+}
+
+.green {
+    color: #4CAF50;
+}
+
+.orange {
+    color: #c4a747;
+}
+
+.red {
+    color: #AF504C;
+}
+
+#home {
+    padding-bottom: 20px;
+}
+
+#home h1 {
+    font-size: 1.3em;
+    margin-top: 20px;
+}
+
+#opener {
+    margin-top: 38px !important;
+}
+
+#home img {
+    padding: 0;
+    border: 1px solid #222;
+    max-height: 500px;
+}
+
+#photo-small-screen {
+    display: none;
+    margin-top: 25px;
+    max-width: 100%;
+}
+
+#photo-large-screen {
+    display: block;
+    float: right;
+    margin: 5px 0 25px 25px;
+    max-width: 30%;
+}
+
+#palindrome,
+#counter,
+#minifier,
+#nines {
+    margin-top: 20px;
+}
+
+#palindrome h1 {
+    padding-bottom: 9px;
+    display: inline-block;
+    margin-top: 7px;
+}
+
+textarea {
+    background: #222;
+    color: #ddd;
+    padding: 10px;
+}
+
+#palindrome textarea {
+    width: calc(100% - 20px);
+    height: 200px;
+    margin-bottom: 8px;
+}
+
+#minifier textarea {
+  width: calc(100% - 244px);
+  height: 340px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+#jobs {
+    float: right;
+    border: #bbb 1px dotted;
+    padding: 10px 10px 0;
+    width: 170px;
+    position: absolute;
+    top: -40px;
+    right: 0;
+    font-size: 13px;
+    background: #444;
+    min-height: 75%;
+}
+
+#jobs a {
+    font-size: 1.1em;
+}
+
+#jobs h3 {
+    margin: -10px -10px 10px;
+    padding: 7px;
+    background: #555;
+    font-size: 1.2em;
+}
+
+#zr-attribution {
+    padding: 4px 0 0 10px;
+    margin: 0 -1px;
+    background: #eee;
+    border: #bbb 1px dotted;
+    position: absolute;
+    bottom: -65px;
+    right: 0;
+}
+
+#geocoder textarea {
+    width: 100%;
+    min-height: 420px;
+    height: 85%;
+    overflow: auto;
+}
+
+#counter h1 {
+  margin-top: 8px;
+}
+
+#nines h1 {
+    margin: 20px 0 5px;
+}
+
+#counter textarea {
+    width: calc(100% - 20px);
+    height: 340px;
+    margin: 10px 0 7px;
+    padding: 10px;
+    font-size: 1em;
+    background: #222;
+    color: #ddd;
+}
+
+#words-totalchars {
+    position: absolute;
+    top: 54px;
+    right: 30px;
+    color: #E8990C;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#characters {
+    color: #E8990C;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#characters em {
+    color: rgb(238, 238, 238);
+    padding-right: 15px;
+    position: relative;
+    top: -1px;
+}
+
+.divider {
+    color: #333;
+    padding: 0 10px;
+    font-size: 0.8em;
+    position: relative;
+    top: -2px;
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 9px 0 11px;
+    border-bottom: dotted 1px #888;
+    color: #c4a747;
+    font-weight: bold;
+    letter-spacing: .1em;
+}
+
+#header span {
+    padding-left: 30px;
+}
+
+#header a {
+  color: #c4a747;
+}
+
+#ip,
+#ua {
+    font-size: 1.5em;
+    margin: 0 0 20px;
+}
+
+#nines #output {
+    margin-bottom: 25px;
+    font-size: 1.1em;
+    font-family: consolas, courier new, monospace;
+}
+
+#nines #output p {
+    margin: 0;
+    padding: 7px 0 0;
+}
+
+#nines button {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    padding: 5px 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#nines #start {
+    display: none;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-clear {
+    clear: both;
+}
+
+.book p {
+  margin: 2px 0 20px;
+}
+
+
+
+.book aside p {
+  margin: 3px 0;
+}
+
+.book .credits {
+  font-size: .9em;
+  border-top: #222 1px solid;
+  font-style: italic;
+  margin-top: 15px;
+  padding-top: 12px;
+}
+
+aside h3 {
+  margin: 0 0 7px;
+}
+
+#table-of-contents-title {
+  font-style: italic;
+  margin: 0 0 7px;
+}
+
+#table-of-contents-title span {
+  color: #aaa;
+  font-size: .8em;
+  display: inline-block;
+  font-style: normal;
+}
+
+#text {
+  margin-top: -10px;
+  order: 1;
+}
+
+#text section {
+  border-top: #555 solid 1px;
+  margin-top: 26px;
+}
+
+#text h3 {
+  margin-top: 25px;
+}
+
+#table-of-contents-intro {
+  display: none;
+}
+
+.book aside {
+  padding: 15px 20px;
+  margin: 20px 0 35px;
+  background: rgb(40, 40, 40);
+}
+
+.book table {
+  width: 100%;
+  text-align: right;
+  border-collapse: collapse;
+  background: rgb(55,55,55);
+  margin-bottom: 20px;
+}
+
+.book table td,
+.book table th {
+  border: #555 solid 1px;
+  padding: 8px 15px;
+  vertical-align: top;
+}
+
+.footnote em {
+  font-size: .9em;
+}
+
+.sub-section {
+  font-style: italic;
+  padding: 15px 20px 0;
+  box-shadow: inset 0 0 15px rgba(0,0,0,.25);
+  width: calc(100% - 40px);
+  font-size: .9em;
+  border-radius: 5px;
+}
+
+#text .sub-section p,
+#text .sub-section li {
+  padding-right: 0;
+}
+
+.quotation {
+    font-style: italic;
+    padding: 0 10px;
+    border-left: rgba(255, 244, 207, .1) solid 1px;
+}
+
+#text .quotation p {
+    color: #FFF4CF;
+}
+
+#text .sub-section p:last-of-type {
+  padding-bottom: 15px;
+}
+
+#text .sub-section ol {
+  padding-bottom: 3px;
+}
+
+.book table {
+  font-size: .9em;
+}
+
+#crime-and-punishment {
+  font-style: italic;
+  font-size: .9em;
+}
+
+#crime-and-punishment li {
+  padding-bottom: 12px;
+}
+
+.book li table {
+  width: auto;
+  text-align: left;
+  background: inherit;
+  margin-bottom: 0;
+}
+
+.book li table td,
+.book li table th {
+  border: 0;
+  padding: 10px 0 0 10px;
+  font-size: 1.1em;
+}
+
+.book table td table td {
+  padding: 0 10px 10px 0;
+  font-size: 1.1em;
+}
+
+@media (min-width: 1024px) {
+
+  #text-and-chapters {
+    display: flex;
+  }
+
+  #table-of-contents-intro {
+    display: block;
+  }
+
+  #book-title {
+    text-align: center;
+    margin: 5px 250px 0 0;
+  }
+
+  .book aside {
+    padding: 25px;
+    margin: 0 0 -165px;
+    position: relative;
+    top: -130px;
+    order: 2;
+  }
+
+  .book aside div {
+    position: sticky;
+    top: 15px;
+    width: 200px;
+  }
+
+  #text p {
+    padding-right: 25px;
+  }
+
+  .book table {
+    width: calc(100% - 25px);
+  }
+
+  .sub-section {
+    padding: 20px 20px 0;
+    width: calc(100% - 65px);
+  }
+
+  #text .sub-section p:last-of-type {
+    padding-bottom: 20px;
+  }
+
+}
+
+@media (max-width: 875px) {
+
+  #jobs {
+      display: none;
+  }
+
+  #minifier textarea {
+      width: calc(100% - 25px);
+  }
+
+  #text section {
+    border-color: #777;
+  }
+}
+
+@media (max-width: 800px) {
+
+  header {
+    padding: 15px;
+  }
+
+  .logo a span {
+    display: none;
+  }
+
+  main {
+    margin: 15px;
+  }
+
+  #ip,
+  #ua {
+    font-size: 1.25em;
+  }
+
+}
+
+@media (max-width: 750px) {
+
+    body {
+        padding: 20px 20px 0;
+    }
+
+    #header span {
+        padding-left: 20px;
+    }
+
+    #photo-small-screen {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    #photo-large-screen {
+        display: none;
+    }
+
+    #home h1:first-of-type {
+      margin-top: 0;
+    }
+}
+
+@media (max-width: 675px) {
+
+  #minifier h1 {
+      margin: 15px 0 8px;
+  }
+
+  #minifier h2 {
+      display: none;
+  }
+
+  .book table td,
+  .book table th {
+    padding: 5px;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .breakable-word span {
+    display: inline-block;
+  }
+
+}

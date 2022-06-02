@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WHEATER APP</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body id="body">
+    <div class="container">
+        <div class="header" id="result">
+            <h1 class="title">WHEATER APP</h1>
+        </div>
+        <form class="form" id="form"> <select id="select" class="form__input">
+                <option value="" selected disabled>Choose a Country</option>
+                <option selected class="form__xd" value="ecuador">Ecuador</option>
+                <option class="form__xd" value="venezuela">Venezuela</option>
+                <option class="form__xd" value="mexico">Mexico</option>
+                <option class="form__xd" value="colombia">Colombia</option>
+            </select> <input type="text" placeholder="Type your city:" id="input" class="form__input">
+            <div class="form__submit"> <button class="form__submit--button" id="Submit">SEARCH</button> </div>
+            <div class="errores-container" id="errorC"> </div>
+        </form>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
